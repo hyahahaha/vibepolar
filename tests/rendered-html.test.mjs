@@ -1,0 +1,67 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+
+async function render(pathname = "/") {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set(
+    "test",
+    `${process.pid}-${Date.now()}-${pathname}`,
+  );
+  const { default: worker } = await import(workerUrl.href);
+
+  return worker.fetch(
+    new Request(`https://vibemap.example${pathname}`, {
+      headers: {
+        accept: "text/html",
+        host: "vibemap.example",
+        "x-forwarded-host": "vibemap.example",
+        "x-forwarded-proto": "https",
+      },
+    }),
+    {
+      ASSETS: {
+        fetch: async () => new Response("Not found", { status: 404 }),
+      },
+    },
+    {
+      waitUntil() {},
+      passThroughOnException() {},
+    },
+  );
+}
+
+async function htmlFor(pathname) {
+  const response = await render(pathname);
+  assert.equal(response.status, 200);
+  assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
+  return response.text();
+}
+
+test("server-renders the VibeMap public home page", async () => {
+  const html = await htmlFor("/");
+
+  assert.match(html, /<html lang="ja">/);
+  assert.match(html, /街のVibeが、地図になる。/);
+  assert.match(html, /href="\/privacy"/);
+  assert.match(html, /href="\/support"/);
+  assert.match(html, /content="https:\/\/vibemap\.example\/og\.png"/);
+  assert.doesNotMatch(html, /codex-preview|Your site is taking shape/);
+});
+
+test("server-renders the privacy policy", async () => {
+  const html = await htmlFor("/privacy");
+
+  assert.match(html, /プライバシーポリシー \| VibeMap/);
+  assert.match(html, /緯度・経度そのものをVibeMapのデータベースへ/);
+  assert.match(html, /匿名アカウントを削除/);
+  assert.match(html, /Supabase/);
+});
+
+test("server-renders support and account deletion guidance", async () => {
+  const html = await htmlFor("/support");
+
+  assert.match(html, /サポート \| VibeMap/);
+  assert.match(html, /よくあるご質問/);
+  assert.match(html, /マイページ/);
+  assert.match(html, /匿名アカウントとデータの削除/);
+});
