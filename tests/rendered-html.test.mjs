@@ -55,6 +55,7 @@ test("server-renders the privacy policy", async () => {
   assert.match(html, /緯度・経度そのものをVibeMapのデータベースへ/);
   assert.match(html, /匿名アカウントを削除/);
   assert.match(html, /Supabase/);
+  assert.match(html, /mailto:vibemap\.support@gmail\.com/);
 });
 
 test("server-renders support and account deletion guidance", async () => {
@@ -64,4 +65,5 @@ test("server-renders support and account deletion guidance", async () => {
   assert.match(html, /よくあるご質問/);
   assert.match(html, /マイページ/);
   assert.match(html, /匿名アカウントとデータの削除/);
+  assert.match(html, /mailto:vibemap\.support@gmail\.com/);
 });

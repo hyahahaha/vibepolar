@@ -62,6 +62,12 @@ export default function SupportPage() {
             <p>
               VibeMapアプリの「マイページ」→「問い合わせ」から運営へご連絡ください。停止中の匿名アカウントからも問い合わせできます。
             </p>
+            <p className="contact-email">
+              メール：
+              <a href="mailto:vibemap.support@gmail.com">
+                vibemap.support@gmail.com
+              </a>
+            </p>
             <p className="contact-note">
               問題が発生した画面、操作手順、通信状態を記載すると確認がスムーズです。
             </p>

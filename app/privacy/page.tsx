@@ -102,7 +102,11 @@ export default function PrivacyPage() {
           <section>
             <h2>10. お問い合わせ</h2>
             <p>
-              本ポリシーやデータ削除に関するご質問は、VibeMapアプリの「マイページ」→「問い合わせ」からご連絡ください。
+              本ポリシーやデータ削除に関するご質問は、VibeMapアプリの「マイページ」→「問い合わせ」、または
+              <a className="text-link" href="mailto:vibemap.support@gmail.com">
+                vibemap.support@gmail.com
+              </a>
+              へご連絡ください。
             </p>
             <Link className="text-link" href="/support">
               サポート情報を見る
