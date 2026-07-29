@@ -35,7 +35,7 @@ export default function SupportPage() {
           <p className="document-intro">
             よくある状況の解決方法と、問い合わせ・アカウント削除の手順をご案内します。
           </p>
-          <p className="updated-date">対応バージョン：VibePolar 1.0.1 / iOS 17以降</p>
+          <p className="updated-date">対応バージョン：VibePolar 1.0.0 / iOS 17以降</p>
         </header>
 
         <section className="support-list" aria-labelledby="faq-title">
