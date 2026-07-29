@@ -2,7 +2,7 @@ import Link from "next/link";
 import { SiteShell } from "./site-shell";
 
 export const metadata = {
-  title: "VibeMap",
+  title: "VibePolar",
   description: "二択の回答から、地域ごとのVibeを地図で楽しむiPhoneアプリ。",
 };
 
@@ -12,7 +12,7 @@ export default function Home() {
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero-copy">
           <p className="eyebrow">iPhone app</p>
-          <h1 id="hero-title">VibeMap</h1>
+          <h1 id="hero-title">VibePolar</h1>
           <p className="hero-lead">街のVibeが、地図になる。</p>
           <p className="hero-description">
             二択のVibe Checkに答えて、日本各地の好みや意見の違いを地図で楽しむアプリです。
@@ -28,8 +28,8 @@ export default function Home() {
         </div>
         <div className="hero-visual">
           <img
-            src="/vibemap-app-icon.png"
-            alt="VibeMapのアプリアイコン"
+            src="/vibepolar-app-icon.png"
+            alt="VibePolarのアプリアイコン"
             width="1024"
             height="1024"
           />
@@ -67,7 +67,7 @@ export default function Home() {
         </div>
         <div className="data-copy">
           <p>
-            許可された現在地の緯度・経度は、市区町村を判定するためだけに端末内で利用し、VibeMapのデータベースには保存しません。
+            許可された現在地の緯度・経度は、市区町村を判定するためだけに端末内で利用し、VibePolarのデータベースには保存しません。
           </p>
           <Link className="text-link" href="/privacy">
             データの取り扱いを確認する

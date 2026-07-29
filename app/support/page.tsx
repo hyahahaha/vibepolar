@@ -3,7 +3,7 @@ import { SiteShell } from "../site-shell";
 
 export const metadata = {
   title: "サポート",
-  description: "VibeMapの使い方、問題解決、問い合わせ方法をご案内します。",
+  description: "VibePolarの使い方、問題解決、問い合わせ方法をご案内します。",
 };
 
 const supportItems = [
@@ -31,11 +31,11 @@ export default function SupportPage() {
       <article className="document-page support-page">
         <header className="document-header">
           <p className="eyebrow">Support</p>
-          <h1>VibeMapサポート</h1>
+          <h1>VibePolarサポート</h1>
           <p className="document-intro">
             よくある状況の解決方法と、問い合わせ・アカウント削除の手順をご案内します。
           </p>
-          <p className="updated-date">対応バージョン：VibeMap 1.0.0 / iOS 17以降</p>
+          <p className="updated-date">対応バージョン：VibePolar 1.0.1 / iOS 17以降</p>
         </header>
 
         <section className="support-list" aria-labelledby="faq-title">
@@ -60,7 +60,7 @@ export default function SupportPage() {
           </div>
           <div>
             <p>
-              VibeMapアプリの「マイページ」→「問い合わせ」から運営へご連絡ください。停止中の匿名アカウントからも問い合わせできます。
+              VibePolarアプリの「マイページ」→「問い合わせ」から運営へご連絡ください。停止中の匿名アカウントからも問い合わせできます。
             </p>
             <p className="contact-email">
               メール：

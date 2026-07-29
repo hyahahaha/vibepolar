@@ -3,7 +3,7 @@ import { SiteShell } from "../site-shell";
 
 export const metadata = {
   title: "プライバシーポリシー",
-  description: "VibeMapにおける利用者情報の取り扱いについて説明します。",
+  description: "VibePolarにおける利用者情報の取り扱いについて説明します。",
 };
 
 export default function PrivacyPage() {
@@ -14,16 +14,16 @@ export default function PrivacyPage() {
           <p className="eyebrow">Privacy policy</p>
           <h1>プライバシーポリシー</h1>
           <p className="document-intro">
-            VibeMapは、必要な範囲に限って利用者情報を取り扱います。本ポリシーでは、収集する情報、利用目的、削除方法を説明します。
+            VibePolarは、必要な範囲に限って利用者情報を取り扱います。本ポリシーでは、収集する情報、利用目的、削除方法を説明します。
           </p>
-          <p className="updated-date">制定日・最終更新日：2026年7月16日</p>
+          <p className="updated-date">制定日：2026年7月16日 / 最終更新日：2026年7月30日</p>
         </header>
 
         <div className="document-body">
           <section>
             <h2>1. 適用範囲</h2>
             <p>
-              本ポリシーは、VibeMap運営者が提供するiPhoneアプリ「VibeMap」と、本Webサイトに適用されます。
+              本ポリシーは、VibePolar運営者が提供するiPhoneアプリ「VibePolar」（旧称：VibeMap）と、本Webサイトに適用されます。名称変更によるデータの取り扱い内容の変更はありません。
             </p>
           </section>
 
@@ -50,7 +50,7 @@ export default function PrivacyPage() {
           <section className="important-section">
             <h2>3. 位置情報</h2>
             <p>
-              現在地は、利用者が許可した場合だけ、市区町村を判定する目的で端末内にて使用します。緯度・経度そのものをVibeMapのデータベースへ送信または保存することはありません。投票時には、判定または手動選択された市区町村コードを保存します。
+              現在地は、利用者が許可した場合だけ、市区町村を判定する目的で端末内にて使用します。緯度・経度そのものをVibePolarのデータベースへ送信または保存することはありません。投票時には、判定または手動選択された市区町村コードを保存します。
             </p>
           </section>
 
@@ -102,7 +102,7 @@ export default function PrivacyPage() {
           <section>
             <h2>10. お問い合わせ</h2>
             <p>
-              本ポリシーやデータ削除に関するご質問は、VibeMapアプリの「マイページ」→「問い合わせ」、または
+              本ポリシーやデータ削除に関するご質問は、VibePolarアプリの「マイページ」→「問い合わせ」、または
               <a className="text-link" href="mailto:vibemap.support@gmail.com">
                 vibemap.support@gmail.com
               </a>

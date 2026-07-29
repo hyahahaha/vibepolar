@@ -5,9 +5,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
   return (
     <div className="site-frame">
       <header className="site-header">
-        <Link className="brand" href="/" aria-label="VibeMapトップ">
-          <img src="/vibemap-app-icon.png" alt="" width="44" height="44" />
-          <span>VibeMap</span>
+        <Link className="brand" href="/" aria-label="VibePolarトップ">
+          <img src="/vibepolar-app-icon.png" alt="" width="44" height="44" />
+          <span>VibePolar</span>
         </Link>
         <nav aria-label="メインナビゲーション">
           <Link href="/privacy">プライバシー</Link>
@@ -17,13 +17,13 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <main>{children}</main>
       <footer className="site-footer">
         <Link className="footer-brand" href="/">
-          VibeMap
+          VibePolar
         </Link>
         <div className="footer-links">
           <Link href="/privacy">プライバシーポリシー</Link>
           <Link href="/support">サポート</Link>
         </div>
-        <p>© 2026 VibeMap</p>
+        <p>© 2026 VibePolar</p>
       </footer>
     </div>
   );
