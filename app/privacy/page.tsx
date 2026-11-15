@@ -16,7 +16,7 @@ export default function PrivacyPage() {
           <p className="document-intro">
             VibePolarは、必要な範囲に限って利用者情報を取り扱います。本ポリシーでは、収集する情報、利用目的、削除方法を説明します。
           </p>
-          <p className="updated-date">制定日：2026年7月16日 / 最終更新日：2026年7月30日</p>
+          <p className="updated-date">制定日：2026年7月16日 / 最終更新日：2026年11月16日</p>
         </header>
 
         <div className="document-body">
